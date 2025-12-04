@@ -1,7 +1,9 @@
 class Car:
+    total_cars = 0
     def __init__(self,brand, model):
         self.brand = brand
         self.model = model
+        Car.total_cars += 1
 
     def fuel_type(self):
         return "petrol or diesel"
@@ -19,4 +21,5 @@ my_tata = Car("Tata", "Safari")
 my_tesla = ElectricCar("Tesla","Model S","75kwh")
 print(my_tata.fuel_type())
 print(my_tesla.fuel_type())
+print(Car.total_cars)
 
